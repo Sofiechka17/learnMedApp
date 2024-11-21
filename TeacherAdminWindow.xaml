@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfAppMed.TeacherAdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppMed"
+        mc:Ignorable="d"
+        Title="TeacherAdminWindow" Height="530" Width="800">
+    <Grid>
+        <DataGrid x:Name="Registration_teacher" HorizontalAlignment="Left" Height="262" AutoGenerateColumns="False" Margin="33,70,0,0" VerticalAlignment="Top" Width="430" MouseLeftButtonUp="Registration_teacher_MouseLeftButtonUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding teacher_id}" Header="Id" />
+                <DataGridTextColumn Binding="{Binding teacher_fullname}" Header="ФИО" />
+                <DataGridTextColumn Binding="{Binding teacher_seniority}" Header="Стаж" />
+                <DataGridTextColumn Binding="{Binding phone_number}" Header="Номер телефона" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="610,354,0,0" VerticalAlignment="Top" Width="76" Click="Click_add"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="610,392,0,0" VerticalAlignment="Top" Width="76" Click="Click_del"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="610,433,0,0" VerticalAlignment="Top" Width="76" Click="Click_up"/>
+        <TextBox x:Name="fullname_input2" HorizontalAlignment="Left" Height="23" Margin="510,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251"/>
+        <Label Content=" Введите ФИО" HorizontalAlignment="Left" Margin="501,107,0,0" VerticalAlignment="Top"/>
+        <Label Content="Админ" HorizontalAlignment="Left" Margin="33,25,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Регистрация преподавателя" HorizontalAlignment="Left" Margin="318,28,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="seniority_input" HorizontalAlignment="Left" Height="23" Margin="510,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251"/>
+        <Label Content=" Введите Номер телефона" HorizontalAlignment="Left" Margin="501,246,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="number_input2" HorizontalAlignment="Left" Height="23" Margin="510,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251"/>
+        <Label Content=" Введите Стаж" HorizontalAlignment="Left" Margin="501,180,0,0" VerticalAlignment="Top"/>
+        <Label Content="Действия с пользователем" HorizontalAlignment="Left" Margin="570,314,0,0" VerticalAlignment="Top"/>
+        <Button Content="Перейти к студенту" HorizontalAlignment="Left" Margin="33,364,0,0" VerticalAlignment="Top" Width="181" Click="Button_Click_student"/>
+        <Button Content="Перейти к преподавателю" HorizontalAlignment="Left" Margin="282,364,0,0" VerticalAlignment="Top" Width="181" Click="Button_LK_teacher"/>
+        <ComboBox x:Name="Filter_seniority" HorizontalAlignment="Left" Margin="510,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Seniority_Changed">
+            <ComboBoxItem Content="Все" />
+            <ComboBoxItem Content="Опытный" />
+            <ComboBoxItem Content="Молодой" />
+        </ComboBox>
+        <ComboBox x:Name="Directions" HorizontalAlignment="Left" Margin="308,409,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Directions_SelectionChanged"/>
+        <ComboBox x:Name="Courses" HorizontalAlignment="Left" Margin="450,409,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Записать на курс" HorizontalAlignment="Left" Margin="308,443,0,0" VerticalAlignment="Top" Width="120" Click="RegisterTeacherToCourse_Click"/>
+        <TextBox x:Name="seach" HorizontalAlignment="Left" Margin="648,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113" Height="22" TextChanged="Search_TextChanged"/>
+    </Grid>
+</Window>

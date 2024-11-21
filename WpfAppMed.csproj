@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="diploma.png" />
+    <None Remove="free-icon-burger-menu-10613684.png" />
+    <None Remove="image 5.png" />
+    <None Remove="logo.png" />
+    <None Remove="organic-flat-medical-conference_23-2148893343.jpg" />
+    <None Remove="price.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Npgsql" Version="8.0.4" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="free-icon-burger-menu-10613684.png" />
+    <Resource Include="image 5.png" />
+    <Resource Include="logo.png" />
+    <Resource Include="organic-flat-medical-conference_23-2148893343.jpg" />
+    <Resource Include="diploma.png" />
+    <Resource Include="price.png" />
+  </ItemGroup>
+
+</Project>

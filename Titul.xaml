@@ -1,0 +1,77 @@
+﻿<Window x:Class="WpfAppMed.Titul"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppMed"
+        mc:Ignorable="d"
+        Title="Titul" Height="850" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Верхняя часть -->
+        <DockPanel Grid.Row="0" Background="#72A7FF">
+            <Image Source="logo.png" Width="50" Height="32" Margin="5"/>
+            <TextBlock FontSize="18" FontWeight="Bold" Foreground="White" DockPanel.Dock="Left" Width="692" Height="26">
+                <Run Text="УМЦ"/>
+            </TextBlock>
+            <Image Source="free-icon-burger-menu-10613684.png" Width="32" Height="32" Margin="5" MouseDown="Image_MouseDown"/>
+        </DockPanel>
+
+        <!-- Основной контент -->
+        <Grid Grid.Row="1" Background="White">
+            <!-- Изображение на заднем плане -->
+            <Image Margin="498,403,-10,166" Source="/image 5.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-63.93"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <!-- Другие изображения -->
+            <Image Margin="69,455,413,70" Source="/organic-flat-medical-conference_23-2148893343.jpg" Stretch="Fill" OpacityMask="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Image Margin="582,498,-24,128" Source="/image 5.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="70.742"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <!-- Текст поверх изображения -->
+            <TextBlock TextWrapping="Wrap" 
+           VerticalAlignment="Top" 
+           Height="264" 
+           Width="636" 
+           FontSize="16" 
+           FontWeight="SemiBold" 
+           Margin="0,143,0,0">
+    <Run Text="   Компания АНО ДПО «УЧЕБНЫЙ МЕДИЦИНСКИЙ ЦЕНТР» является образовательным учреждением дополнительного профессионального образования, основанным в 2022 году. Центр расположен в городе Оренбург и предлагает широкий спектр образовательных программ для медицинских работников, включая курсы повышения квалификации и профессиональной переподготовки."/>
+    <LineBreak/>
+    <Run/>
+    <LineBreak/>
+    <Run Text="Учебный Медицинский Центр обладает современной материально-технической базой и высококвалифицированным преподавательским составом. Он пользуется популярностью среди медицинских специалистов региона, предоставляя им возможность повышать свою квалификацию и совершенствовать профессиональные навыки."/>
+</TextBlock>
+
+            <Label Content="УЧЕБНЫЙ МЕДИЦИНСКИЙ ЦЕНТР" HorizontalAlignment="Left" Margin="203,61,0,0" VerticalAlignment="Top" FontSize="20" Height="37" FontWeight="ExtraBold" Foreground="#72A7FF"/>
+        </Grid>
+
+        <!-- Нижняя часть -->
+        <DockPanel Grid.Row="2" Background="#72A7FF"/>
+    </Grid>
+</Window>

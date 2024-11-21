@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfAppMed.TeacherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppMed"
+        mc:Ignorable="d"
+        Title="TeacherWindow" Height="490" Width="500">
+    <Grid>
+        <ComboBox x:Name="Students" HorizontalAlignment="Center" Height="23" Margin="0,73,0,0" VerticalAlignment="Top" Width="400">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding student_id}" Width="50" />
+                        <TextBlock Text="{Binding student_fullname}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Студенты" HorizontalAlignment="Left" Margin="49,22,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <ComboBox x:Name="Directions" HorizontalAlignment="Center" Height="28" Margin="0,167,0,0" VerticalAlignment="Top" Width="400" SelectionChanged="Directions_SelectionChanged"/>
+        <Label Content="Направления" HorizontalAlignment="Left" Margin="49,122,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <ComboBox x:Name="Courses" HorizontalAlignment="Center" Height="28" Margin="0,276,0,0" VerticalAlignment="Top" Width="400" SelectionChanged="Courses_SelectionChanged"/>
+        <Label Content="Курсы" HorizontalAlignment="Left" Margin="50,227,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Button Content="Записать на курс" HorizontalAlignment="Left" Margin="50,349,0,0" VerticalAlignment="Top" Width="174" Height="30" FontWeight="Bold" Click="btn_note"/>
+        <Button Content="Тестирование" HorizontalAlignment="Left" Margin="276,349,0,0" VerticalAlignment="Top" Width="174" Height="30" FontWeight="Bold" Click="btn_testing"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="50,404,0,0" VerticalAlignment="Top" Width="174" Height="30" FontWeight="Bold" Click="btn_cancel"/>
+    </Grid>
+</Window>
